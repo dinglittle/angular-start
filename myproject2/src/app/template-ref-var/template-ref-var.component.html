@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">演示模板内部的局部变量</div>
+  <div class="panel-body">
+    <input #heroInput>
+    <p>{{heroInput.value}}</p>
+    <button class="btn btn-sucess" (click)="sayHello(heroInput.value)">局部变量</button>
+  </div>
+</div>
