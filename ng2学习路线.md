@@ -29,40 +29,40 @@ jhipster
 
 
 #### 1.更改淘宝镜像
-https://npm.taobao.org/
+`https://npm.taobao.org/`
 
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+`npm install -g cnpm --registry=https://registry.npm.taobao.org`
 
 #### 2.安装 angular/cli
 
-https://www.npmjs.com/package/angular-cli#installation
+`https://www.npmjs.com/package/angular-cli#installation`
 
-cnpm install -g @angular/cli
+`cnpm install -g @angular/cli`
 
 #### 3.新建项目
-ng new <project-name>
+`ng new <project-name>`
 
 
 ---
 
 ### 克隆项目
-git clone https://git.oschina.net/mumu-osc/NiceFish.git
+`git clone https://git.oschina.net/mumu-osc/NiceFish.git`
 
 ### 安装淘宝镜像
-npm i -g cnpm --registry=https://registry.npm.taobao.org
+`npm i -g cnpm --registry=https://registry.npm.taobao.org`
 
 ### 安装 @angular/cli
-cnpm i -g  @angular/cli
+`cnpm i -g  @angular/cli`
 
 ### 安装依赖包
-cnpm install
+`cnpm install`
 
 ### 启动服务
-ng serve
+`ng serve`
 
 如果你想让加载的包更小,请使用以下方式启动 angular-cli 内置的轻量级 http server
 
-ng serve --prod
+`ng serve --prod`
 
 "@angular/cli": "1.3.0",   prod不能用
 
@@ -70,7 +70,7 @@ ng serve --prod
 然后重新执行 cnpm install ,全局的 @angular/cli 也需要删掉重装
 
 
-假如遇到 端口被占用的， 先把之前的终止d
+假如遇到 端口被占用的， 先把之前的终止
 
 
 
@@ -159,17 +159,18 @@ bootstrap 12列 （ 12？  1 2 3 4 6 12 整除）
 -响应式图片方案1： W3C的新标准
 
 根据不同的 屏幕加载不同的图片 （ 草案 ）
+```
 <picture>
     <source media="(min-width:45em)" src="images/flower-large.jpg"></source>
     <source media="min-width:18em)" src="images/flower-medium.jpg"></source>
     <img src="images/flower-small.jpg" alt=" a flower">
 
 </pictrue>   
-
+```
 
 -响应式图片方案2：使用js插件
 
-Picturefull
+`Picturefull`
 
 -响应式图片方案3：由服务端控制
 
@@ -200,12 +201,12 @@ UserAgent Parser 识别客户端类型
     手机            设计出针对手机屏幕的布局样式
 
     平板
-
+```
 //小于 36em 样式
 @media only screen and (min-width:36em){
 
 }
-
+```
 
 
 - 切分断点（临界值）
