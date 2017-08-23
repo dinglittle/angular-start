@@ -1,7 +1,9 @@
 ### 内容提要
 
 
-- 组件
+
+#### 组件
+
 TS代码、模板（数据绑定、事件绑定）、外观与动效、把服务注入给组件
 
 - 组件间通讯
@@ -13,22 +15,24 @@ TS代码、模板（数据绑定、事件绑定）、外观与动效、把服务
 
 
 步骤
-
+```
 styles.css  引入 样式 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 字体图标
 @import "~font-awesome/css/font-awesome.min.css";
-
+```
 
 编译启动
 -o 使用默认的浏览器打开
-ng serve -o  
+`ng serve -o`  
 
 
 ----
 组件 
+```
 app -> home -> social-channel -> 
-social-channel.component.ts  组件定义文件
+social-channel.component.ts  //组件定义文件
+```
 
 重点在模板 
 @Component 内
@@ -50,10 +54,11 @@ sitstat
 
 
 ---
-5.1模板语法
+* 5.1模板语法 *
 ---
 
-- 把CSS预编译成SASS
+-_把CSS预编译成SASS_
+
 	在 .angular-cli.josn 中更改 “styles" "styles.css" 为 ”styles.scss"
 	
 	更改主入口  style.css  为  sylte.scss
@@ -63,7 +68,7 @@ sitstat
 	
 	为 package.json  dependencies（依赖，相关）增加 
 
-- 导入Bootstrap 和 fontawesome详细过程
+-_导入Bootstrap 和 fontawesome详细过程_
 
 	在 styles.scss 中引入 bootstrap.css
 
@@ -77,7 +82,7 @@ sitstat
 	http://fontawesome.io/icons/		图标
 
 
-- 创建新的组件
+-_创建新的组件_
 
 	ng g c TemplateInterpolation
 	驼峰法命名（自动创建）
@@ -96,7 +101,7 @@ sitstat
 
 
 
-- 插值语法和表达式
+-_插值语法和表达式_
 
 	在 template-interpolation.component.ts 中定义
 
