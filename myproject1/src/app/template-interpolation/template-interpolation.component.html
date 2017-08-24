@@ -1,0 +1,25 @@
+<div>
+  template-interpolation works!
+
+  <p>{{title}}</p>
+  <p>{{title2}}</p>
+  <p>{{title3}}</p>
+
+  <br>
+  <button (click)="getValue()">点我</button>
+  <button (click)="setValue(title3)">设置</button>
+  <input type="text" ng-model="title3">
+
+
+  <h1>{{title}}</h1>
+  <h2>{{hero.name}}details!</h2>
+  <div><label>id:</label>{{hero.id}}</div>
+  <div><label>name:</label>{{hero.name}}</div>
+  <!-- 编辑英雄名字 -->
+  <div>
+    <label>name:</label>
+    <!-- <input [(ngModel)]="hero.name" placeholder="name"> -->
+    <input ngModel="hero.name" placeholder="name">
+  </div>
+
+</div>
