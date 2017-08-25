@@ -170,5 +170,49 @@ sitstat
 
 [(ngModel)]是一个Angular语法，用与把 hero.name 绑定到输入框中。 它的数据流是双向的，从属性到输入框，并且输入框回到属性。
 
+ngModel是Angular默认的指令 ，但是默认情况下却是不可用的。它属于一个可选模块 `FormsModule` 。
 
+#### 导入 FormsModule
+
+打开 `app.module.ts` 文件，并且从 `@angular/forms` 库中导入符号 `FormsModule`。然后把 `FormsModule`。
+
+然后把 `FormsModule` 添加到`@NgModule`元数据的`imports`数据中，它是当前应用正在使用的外部模块列表。
+
+修改后的 `AppModule` 是这样的
+
+```
+	import { NgModule }      from '@angular/core';
+	import { BrowserModule } from '@angular/platform-browser';
+	import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+	 
+	import { AppComponent }  from './app.component';
+	 
+	@NgModule({
+	  imports: [
+		BrowserModule,
+		FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+	  ],
+	  declarations: [
+		AppComponent
+	  ],
+	  bootstrap: [ AppComponent ]
+	})
+	export class AppModule { }
+```
+
+---
+
+### 主从结构
+
+#### ngFor 遍历
+ ```
+	/**
+	*	ngFor 的 * 前缀表示 <li> 及其子元素组成了一个主控模板
+	*	ngFor 指令在 AppComponent.heros 属性返回的 heros 数组上迭代，并输出此模板的实例。
+	*	引号中赋值给 ngFor 的那段文本表示 “从heros数组中取出每个英雄，存入一个局部的 hero 变量，并让它在相应的模板实例中可用”
+	*/	
+	<li *ngFor=="let hero of heros">
+ ```
+ 
+ 
 

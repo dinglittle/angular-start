@@ -16,9 +16,10 @@ export class Hero{
   name:string;
 }
 
-// hero: Hero = {
-//   id:1,
-//   name:'name'
+// export class Hero implements OnInit {
+//   public hero:Hero ={
+//     id:1,
+//     name:'windStorm'
+//   }
 // }
-
 

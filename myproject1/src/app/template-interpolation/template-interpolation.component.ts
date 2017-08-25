@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-interpolation.component.css']
 })
 
+// export class Hero{
+//   id:number;
+//   name:string;
+// }
+
+
 export class TemplateInterpolationComponent implements OnInit {
   private title:string = "假的内容";
 
@@ -17,6 +23,18 @@ export class TemplateInterpolationComponent implements OnInit {
     id:1,
     name:'lwj'
   }
+
+  
+  // 定义 英雄 列表
+  public heros = [
+    {id:11,name:'Mr Nice'},
+    {id:12,name:'Narco'},
+    {id:13,name:'Bombasto'},
+    {id:14,name:'Celeritas'},
+    {id:15,name:'Dr IQ'},
+  ]
+
+  
   constructor() { }
 
   ngOnInit() {
@@ -32,3 +50,7 @@ export class TemplateInterpolationComponent implements OnInit {
   }
 
 }
+
+
+
+
