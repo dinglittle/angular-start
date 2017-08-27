@@ -1,0 +1,10 @@
+<h2>
+  *ngIf使用
+</h2>
+<!--
+  注意：这里的 *ngIf 为 false 的时候 ， DOM 中是直接删除 元素的 (ng2特性)
+
+  -->
+<p *ngIf="isShow">内容是否要显示？</p>
+
+<button (click)="toggleShow()">更改图片地址</button>

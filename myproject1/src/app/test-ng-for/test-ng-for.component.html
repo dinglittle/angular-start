@@ -1,0 +1,15 @@
+<h2>
+  ngFor用法
+</h2>
+
+<!-- <ul>
+  <li *ngFor="let i of values;let index=name">{{i}}---{{name}</li>
+</ul> -->
+
+<ul>
+  <li *ngFor="let race of races;let i=index;">
+     {{i+1}}-{{race.name}}
+
+    <!-- {{race}}--{{race.index}}--{{race.name}} -->
+  </li>
+</ul>

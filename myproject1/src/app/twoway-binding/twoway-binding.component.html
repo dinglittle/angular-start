@@ -1,0 +1,10 @@
+<h2>双向绑定</h2>
+<!--这里将  fontSizePx 传递给子组件  -->
+<font-resize [(size)]="fontSizePx">
+
+     
+</font-resize>
+
+<!--这里  会接收到 子组件 返回的字体大小 ， 并且 改变 页面的 字体大小  -->
+<div [(style.font-size.px)]="fontSizePx">Resizeable Text</div>   
+<div [style.font-size.px]="fontSizePx">Resizeable Text</div>     

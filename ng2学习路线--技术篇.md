@@ -214,5 +214,93 @@ ngModel是Angular默认的指令 ，但是默认情况下却是不可用的。�
 	<li *ngFor=="let hero of heros">
  ```
  
- 
+ ### 三种数据绑定方式
+
+	- - 值绑定 、事件绑定、 双向绑定 
+
+	值绑定
+		{{value}}
+
+	注意：
+		模板中的标签化 严格，比如 在 <p> 标签内是不能包含 另一个 <p> 的，否则会被提前 结束 
+		
+		`[]`  将 img 的图片地址绑定为变量
+		`<img [src] = "imgSrc">`
+
+	
+	事件绑定
+
+	 	```
+			<button (click)="sayHello($event)">点击</button>
+		 ```
+
+	双向绑定
+		[()]
+
+		生成 组件 带路径 ， 生成的组件在指定的目录下
+
+		```
+			//生成的 font-resize 组件 在 twoway-binding 目录下
+			ng g c twoway-binding/FontResize
+		```
+
+		1）双向绑定是指，在父子组件间发生的，父组件绑定一个值，并且传给子组件，子组件改变值之和，回传给父组件的过程，这一切 接收和广播值都是由子组件完成的，父组件只需要绑定 需要绑定的值（初始化的值  子组件改变后返回的值）即可
+			双向绑定需要  
+			app.module.ts 中导入 @angular/forms
+			// ngModule 支持
+			import { FormsModule } from '@angular/forms';
+			//子组件
+			import { Component, OnInit,EventEmitter,Input,Output } from '@angular/core';
+			
+			@Input 可以接收一个父组件发送过来的值
+			@Ounput 可以向父组件 广播一个事件（这个事件需要 `EventEmitter` 支持
+
+			//接收 父组件的传值
+			@Input() size:number | string;
+			//定义一个事件，用来广播给父组件
+			@Ouput() sizeChange = new EventEmitter();
+
+			//子组件 .html
+			<button (click)="inc()" title="smaller">加大字体</button>
+			<button (click)="dec()" title="bigger">减小字体</button>
+			<label [style.font-size.px]="size">FontSize:{{size}}</label>
+
+			//子组件 .ts
+			//两个方法，一个用来增加，另一个用来减少
+			dec() {this.resize(-1)}
+  			inc() {this.resize(+1)}
+
+			//上面定义的用来 广播给父组件的事件
+			resize(delta:number){
+				console.log(this.size);
+				this.size = Math.min(40,Math.max(8,+this.size + delta));
+				this.sizeChange.emit(this.size);
+				console.log(this.size);
+			}
+
+
+			父组件 .html
+				<h2>双向绑定</h2>
+				<!--这里将  fontSizePx 传递给子组件  -->
+				<font-resize [(size)]="fontSizePx">
+
+				</font-resize>
+				<!--这里  会接收到 子组件 返回的字体大小 ， 并且 改变 页面的 字体大小  -->
+				<div [(style.font-size.px)]="fontSizePx">Resizeable Text</div> 
+				<div [style.font-size.px]="fontSizePx">Resizeable Text</div>   
+
+			父组件 .ts
+			只需定义初始化的值
+				public fontSizePx:number=16;
+
+### 内置结构型指令用法：*ngIf、*ngFor、*ngSwitch
+	*ngIf 显示
+		*ngIf 同其他判断显示问题，通过判断条件来控制，不同的是，*ngIf 为false的时候，DOM中的元素是直接删除的 ( ng2特性 )
+
+
+
+### 内置熟悉型指令用法：NgClass、NgStyle、NgModel
+
+
+### 小工具：管道、安全导航、非空断言
 
