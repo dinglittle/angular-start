@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+}
+
+// 定义 Hero 类
+export class Hero{
+  id:number;
+  name:string;
 }
