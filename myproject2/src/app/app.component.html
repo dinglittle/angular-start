@@ -12,4 +12,16 @@
   <my-template>
     
   </my-template>
+
+  <!-- 英雄详情组件 -->
+  <hero-detail>
+
+  </hero-detail>
+
+
+  <ul>
+    <li*ngFor="let hero of heroes" (click)="onSelect(hreo)">
+      {{hero.id}}--{{hero.name}}
+    </li>
+  </ul>
 </div>
