@@ -1,16 +1,16 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">值绑定 - 内部值</div>
+    <p>{{imgSrc}}</p>
 
+    <img [src]="imgSrc" />
 
-  <h2>值绑定 - 内部值</h2>
-  <p>{{imgSrc}}</p>
-
-  <img [src]="imgSrc"/>
-
-  <!--
+    <!--
   img 标签 title 为 鼠标移动到 图片上方的 提示 
   alt 为 图片地址找不到图片时 img 标签位的显示文字s
 -->
 
-  <button (click)="changeSrc(imgSrc)">更改图片地址</button>
+    <button (click)="changeSrc(imgSrc)">更改图片地址</button>
 
-  
-
+  </div>
+</div>
