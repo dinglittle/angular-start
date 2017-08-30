@@ -10,7 +10,7 @@
 
   <!-- 官网DEMO -->
   <my-template>
-    
+
   </my-template>
 
   <!-- 英雄详情组件 -->
@@ -18,10 +18,22 @@
 
   </hero-detail>
 
-
-  <ul>
-    <li*ngFor="let hero of heroes" (click)="onSelect(hreo)">
-      {{hero.id}}--{{hero.name}}
+  <h2>My Heroes</h2>
+  <!-- 选中的详情 -->
+  <div *ngIf="selectHero">
+    <!-- <h2>{{selectHero.name}} detail!</h2>
+    <div><label>id: </label>{{selectHero.id}}</div> -->
+    <div>
+      <label>name: </label>
+      <input [(ngModel)]="selectHero.name" placeholder="name">
+    </div>
+  </div>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}  </span>{{hero.name}}
     </li>
   </ul>
+  <hero-detail [hero]="selectHero">
+
+  </hero-detail>
 </div>
