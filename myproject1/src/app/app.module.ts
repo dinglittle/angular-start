@@ -12,6 +12,8 @@ import { FontResizeComponent } from './twoway-binding/font-resize/font-resize.co
 import { TestNgIfComponent } from './test-ng-if/test-ng-if.component';
 import { TestNgForComponent } from './test-ng-for/test-ng-for.component';
 import { TestNgSwitchComponent } from './test-ng-switch/test-ng-switch.component';
+import { ParentAndChildComponent } from './parent-and-child/parent-and-child.component';
+import { ChildComponent } from './parent-and-child/child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { TestNgSwitchComponent } from './test-ng-switch/test-ng-switch.component
     TestNgIfComponent,
     TestNgForComponent,
     TestNgSwitchComponent,
+    ParentAndChildComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,FormsModule,
