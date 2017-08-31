@@ -16,6 +16,7 @@ export class ParentAndChildComponent implements OnInit {
   }
 
     //通过 方法调用 从子组件 传进来的 方法
+    //页面 加载 完毕 执行
  ngAfterViewInit(){
    console.log('ngAfterView');
   this.childComponent.childFn();
