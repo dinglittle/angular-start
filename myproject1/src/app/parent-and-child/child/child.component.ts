@@ -30,7 +30,7 @@ export class ChildComponent implements OnInit {
   //@Output
   //向父组件 传(广播)值
   @Output()
-  //新建 一个 事件
+  //新建 一个 事件  EventEmitter 事件触发器
   public follow=new EventEmitter<string>();
 
   constructor() { } 

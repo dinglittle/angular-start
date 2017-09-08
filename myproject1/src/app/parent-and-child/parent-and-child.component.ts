@@ -19,7 +19,9 @@ export class ParentAndChildComponent implements OnInit {
     //页面 加载 完毕 执行
  ngAfterViewInit(){
    console.log('ngAfterView');
-  this.childComponent.childFn();
+   //这里调用的  childFn 是子组件中的  childFn
+   //上面  import 了 ChildComponent 所以 可以获取到 子组件 转为 私有 变量 ，从而调用方法
+  // this.childComponent.childFn();
 }
 
   public panelTitle = 'fffffff';

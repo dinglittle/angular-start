@@ -5,6 +5,7 @@
       
       <!-- #child 绑定了 child子组件 -->
       <!-- 要想把 父组件的方法 传到 子组件  -->
+      <!-- 父组件  直接 用 ()click 方式 绑定这个 方法 -->
       <child #child (follow)="doSomething()" panelTitle={{panelTitle}}></child>
       <button (click)="child.childFn()" class="btn btn-success">调用子组件</button>
       <button (click)="child.childFn2()">childFn2</button>
