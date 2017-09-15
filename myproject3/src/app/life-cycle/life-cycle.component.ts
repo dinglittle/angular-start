@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'life-cycle',
   templateUrl: './life-cycle.component.html',
-  styleUrls: ['./life-cycle.component.css']
+  styleUrls: ['./life-cycle.component.scss']
 })
-export class LifeCycleComponent implements OnInit {
+export class LifeCycleComponent{
 
   public logs:Array<any>=[];
 
