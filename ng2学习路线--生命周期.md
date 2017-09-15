@@ -6,6 +6,9 @@
  
  
  -----
+ ![image](https://user-images.githubusercontent.com/17232138/30470629-0b6a9ef4-9a28-11e7-90bb-ba20b43d4978.png)
+
+ 
  constructor   (构造函数)不算钩子，钩子只有下面的8个
  
  ngOnChanges		有可能多次
@@ -34,4 +37,8 @@
  
  ---
  
- ### 
+ ### ngOnChanges
+ 
+ - @Input 属性发生变化的时候被调用
+ 
+ - 非@Input 属性改变不会调用ngOnChanges
