@@ -2,10 +2,12 @@
   <div class="panel-heading">父组件</div>
   <div class="panel-body">
    
-    <input [ngModel]="userName"/>
-    <input [ngModel]="userObj.userName"/>
-    {{userName}}
-    {{userObj.userName}}
-    <child></child>
+    <input [(ngModel)]="userName"/>
+    <br/>
+    |
+    <br/>
+    <input [(ngModel)]="userObj.userName"/>
+    
+    <child [userName]="userName" [userObj]="userObj"></child>
   </div>
 </div>

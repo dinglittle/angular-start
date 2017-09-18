@@ -1,9 +1,11 @@
-import { Component ,Input} from '@angular/core';
-
+import { Component ,Input ,ChangeDetectionStrategy} from '@angular/core';
+// 增加了 changeDetection:ChangeDetectionStrategy.Onpush 
+// 设置 检测策略 为 push ,只有在 push 的时候才触发 ,需要 import ChangeDetectionStrategy
 @Component({
   selector: 'life-cycle',
   templateUrl: './life-cycle.component.html',
-  styleUrls: ['./life-cycle.component.scss']
+  styleUrls: ['./life-cycle.component.scss'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class LifeCycleComponent{
   //@Input 是 Componet 中的 
