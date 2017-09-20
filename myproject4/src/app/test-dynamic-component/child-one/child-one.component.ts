@@ -11,7 +11,7 @@ export class ChildOneComponent implements OnInit {
   //定义事件
   @Output()
   public myEvent:EventEmitter<string>=new EventEmitter<string>();
-
+  public myEvent2:EventEmitter<number>=new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +19,7 @@ export class ChildOneComponent implements OnInit {
 
   public sayHello(){
     this.myEvent.emit("这里是子组件emit触发的事件");
+    this.myEvent2.emit(12323);
   }
 
 }
