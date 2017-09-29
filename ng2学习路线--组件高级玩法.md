@@ -142,3 +142,9 @@ http://git.oschina.net/mumu-osc/learn-component
 
  - 事件的处理方法 
 	
+	
+	父子组件,在子组件中添加  `<ng-content></ng-content>` 占位,在父组件中插入子组件,在子组件中直接输入内容
+	
+	通过在 子组件中加入 `select`属性,来选择 `<ng-content></ng-content>`绑定的 DOM , `<ng-content select="h3"></ng-content>"
+	
+	`<ng-content select="test-class"></ng-content>` `select`标识的就是从父组件 传的 可以是 选择器 类名 
