@@ -147,4 +147,4 @@ http://git.oschina.net/mumu-osc/learn-component
 	
 	通过在 子组件中加入 `select`属性,来选择 `<ng-content></ng-content>`绑定的 DOM , `<ng-content select="h3"></ng-content>"
 	
-	`<ng-content select="test-class"></ng-content>` `select`标识的就是从父组件 传的 可以是 选择器 类名 
+	`<ng-content select="test-class"></ng-content>` `select`标识的就是从父组件 传的 可以是 选择器 类名   
