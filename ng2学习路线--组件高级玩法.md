@@ -176,3 +176,18 @@ http://git.oschina.net/mumu-osc/learn-component
 		}
 		
 	```
+
+ ---	
+	
+ ### ContentChild 和 ViewChild
+ 
+ - 用 @ContentChild 操作投影的内容
+ 
+ - 用 @ContentChildren 批量操作多块投影内容
+ 
+ - 用 @ViewChild 操作视图子节点
+ 
+ - 用 @ViewChildren 批量操作多个视图子节点
+ 
+ 
+ 
