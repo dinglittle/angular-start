@@ -8,6 +8,10 @@ import { TestEmulatedModeComponent } from './test-emulated-mode/test-emulated-mo
 import { TestNoneModeComponent } from './test-none-mode/test-none-mode.component';
 import { TestNgContentComponent } from './test-ng-content/test-ng-content.component';
 import { ChildTwoComponent } from './test-ng-content/child-two/child-two.component';
+import { ChildThreeComponent } from './test-ng-content/child-three/child-three.component';
+import { TestContentChildComponent } from './test-content-child/test-content-child.component';
+import { ChildFourComponent } from './test-content-child/child-four/child-four.component';
+import { ChildFiveComponent } from './test-content-child/child-five/child-five.component';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { ChildTwoComponent } from './test-ng-content/child-two/child-two.compone
     TestEmulatedModeComponent,
     TestNoneModeComponent,
     TestNgContentComponent,
-    ChildTwoComponent
+    ChildTwoComponent,
+    ChildThreeComponent,
+    TestContentChildComponent,
+    ChildFourComponent,
+    ChildFiveComponent
   ],
   imports: [
     BrowserModule

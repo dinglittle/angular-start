@@ -148,3 +148,31 @@ http://git.oschina.net/mumu-osc/learn-component
 	通过在 子组件中加入 `select`属性,来选择 `<ng-content></ng-content>`绑定的 DOM , `<ng-content select="h3"></ng-content>"
 	
 	`<ng-content select="test-class"></ng-content>` `select`标识的就是从父组件 传的 可以是 选择器 类名   
+	
+	
+	ng-content 传事件 子组件中有定义的事件 通过 EventEmitter 广播出去,在父组件 中 监听子组件的事件,获取到子组件传出来的 事件
+	
+	```
+		子组件
+		<button class="btn btn-success">sayHello</button>
+		
+		@import { Component, OnInit, Output, EventEmitter }  from '@angular/core';
+		
+		@Output()
+		public sayHello:EventEmitter<string> = new EventEmitter<string>();
+		//这里定义的广播事件
+		
+		public sayHello():void{
+			this.sayhello.emit("派发事件。。。");
+		}
+		
+		
+		父组件 
+		<child-tree (sayHello)="doSomething($event)"></child-three>
+		//这里必须  有参数 $event , 只有 $event 才能获取到 传参
+		
+		public  doSomething(data):void{
+			console.log(data);
+		}
+		
+	```
